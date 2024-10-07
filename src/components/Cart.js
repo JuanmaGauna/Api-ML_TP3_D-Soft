@@ -6,9 +6,8 @@ function Cart() {
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
 
   const handleCheckout = () => {
-    // Aquí deberías integrar MercadoPago o cualquier plataforma de pago
+    // Aquí se debería integrar MercadoPago o cualquier plataforma de pago
     alert('Redirigiendo a MercadoPago...');
-    // Redirecciona al cliente a MercadoPago, o crea la lógica correspondiente
   };
 
   return (
@@ -38,6 +37,8 @@ function Cart() {
           </ul>
           <h2>Total de la compra: ${cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}</h2>
           <button onClick={handleCheckout}>Terminar compra</button>
+          {/* Agregar un enlace para volver a la página de inicio */}
+          <Link to="/">Volver a Inicio</Link>
         </>
       ) : (
         <p>El carrito está vacío</p>
