@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: x-large;
+  margin-left: 20%;
+  color: purple;
+}
+
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  margin-left: 20%;
+  color: navy;
+}
+
+h3{
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  color: black;
+  margin-left: 5%;
+}
+
+p {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: medium;
+  color: black;
+  margin-left: 5%;
+} 
+
+tr {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: x-small;
+  color: black;
+  margin-left: 15%;
+}
+
+tbody {
+  margin-left: 10%;
+}
+
+.img-float {
+  float: left;
+  margin-right: 10px; 
+ }
+
+form, select {
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+

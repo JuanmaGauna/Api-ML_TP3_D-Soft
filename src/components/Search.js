@@ -45,7 +45,8 @@ function Search() {
 
   return (
     <div>
-      <h1>Buscar productos</h1>
+      <h2>Buscar productos</h2>
+      
       <form onSubmit={handleSearch}>
         <input
           type="text"
@@ -53,7 +54,7 @@ function Search() {
           value={query}
           onChange={(e) => setQuery(e.target.value)} // Actualiza el valor de la búsqueda
         />
-        
+    
         {/* Select para elegir una categoría */}
         <select
           value={selectedCategory}
@@ -75,7 +76,7 @@ function Search() {
           <ul>
             {products.map((product) => (
               <li key={product.id}>
-                <img src={product.thumbnail} alt={product.title} />
+                <img classname="img-float" src={product.thumbnail} alt={product.title} />
                 <h3>{product.title}</h3>
                 <p>Precio: ${product.price}</p>
                 <a href={`/product/${product.id}`}>Ver detalles</a>

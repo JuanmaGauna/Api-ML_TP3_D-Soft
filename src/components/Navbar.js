@@ -7,9 +7,9 @@ function Navbar() {
 
   return (
     <nav>
-      <h2>Mi Tienda</h2>
+      <h1> Tienda Departamental </h1>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">🏠Home</Link></li>
         <li>
           <Link to="/cart">
             🛒 Carrito ({cartItems.length}) {/* Muestra la cantidad de productos en el carrito */}

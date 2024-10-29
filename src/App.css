@@ -52,6 +52,23 @@ img {
   margin-right: 20px;
 }
 
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+}
+
 h3 {
   margin: 0;
 }
+
+.container_flex {
+  display: flexbox;
+  margin-left: 10%;
+  margin-right: 10%;
+  
+}
+
+.img-float {
+      float: left; /* La imagen flota a la izquierda del texto */
+      margin-right: 10px; /* Espacio entre la imagen y el texto */
+    }

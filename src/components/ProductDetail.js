@@ -29,7 +29,7 @@ function ProductDetail() {
 
   return (
     <div>
-      <h1>{product.title}</h1>
+      <h3>{product.title}</h3>
 
       {product.pictures && product.pictures.length > 1 ? (
         <Carousel>
