@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 
 function Navbar() {
-  const { cartItems } = useContext(CartContext); // Usamos el contexto para obtener la cantidad de productos en el carrito
+  const { cartItems } = useContext(CartContext);
 
   return (
     <nav>
-      <h1> Tienda Departamental </h1>
+      <h2>Mercado Libre Clone</h2>
       <ul>
         <li><Link to="/">🏠Home</Link></li>
         <li>
           <Link to="/cart">
-            🛒 Carrito ({cartItems.length}) {/* Muestra la cantidad de productos en el carrito */}
+            🛒 Carrito ({cartItems.length})
           </Link>
         </li>
       </ul>

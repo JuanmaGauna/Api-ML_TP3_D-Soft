@@ -8,7 +8,6 @@ function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const { addToCart } = useContext(CartContext);
-
   useEffect(() => {
     const fetchProductDetail = async () => {
       try {
@@ -28,9 +27,8 @@ function ProductDetail() {
   }
 
   return (
-    <div>
-      <h3>{product.title}</h3>
-
+    <div className="product-detail">
+      <h1>{product.title}</h1>
       {product.pictures && product.pictures.length > 1 ? (
         <Carousel>
           {product.pictures.map((picture) => (
@@ -42,30 +40,8 @@ function ProductDetail() {
       ) : (
         <img src={product.pictures?.[0].url} alt={product.title} style={{ width: '300px' }} />
       )}
-
       <p>Precio: ${product.price}</p>
       <p>{product.description}</p>
-
-      {/* Tabla con atributos del producto */}
-      {product.attributes && product.attributes.length > 0 && (
-        <table>
-          <thead>
-            <tr>
-              <th>Atributo</th>
-              <th>Valor</th>
-            </tr>
-          </thead>
-          <tbody>
-            {product.attributes.map((attribute) => (
-              <tr key={attribute.id}>
-                <td>{attribute.name}</td>
-                <td>{attribute.value_name}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-
       <button onClick={() => addToCart(product)}>Agregar al carrito</button>
       <button onClick={() => window.history.back()}>Volver</button>
     </div>
